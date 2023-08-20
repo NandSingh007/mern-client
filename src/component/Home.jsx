@@ -5,7 +5,7 @@ import { movies, slots } from '../component/Data'; // Assuming "seats" import is
 import SideBar from './SideBar.jsx';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+const baseurl="https://server-9fsf.onrender.com";
 const Home = () => {
     // Define initial state for seats
     const initialSeatState = {
@@ -72,7 +72,7 @@ const Home = () => {
     
         try {
             // Send the data to the server
-            const result = await fetch("http://localhost:8080/api/booking", {
+            const result = await fetch(`${baseurl}/api/booking`, {
                 method: 'post',
                 body: JSON.stringify({
                     slot, seats, movie
