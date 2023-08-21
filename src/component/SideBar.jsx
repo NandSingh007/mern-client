@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/sidebar.css';
 import Spinner from 'react-bootstrap/Spinner';
-const baseurl ="https://server-9fsf.onrender.com";
+const baseurl ="https://backend-l0uj.onrender.com";
 function SideBar() {
     // State variables for bookings, loading, and error
     const [bookings, setBookings] = useState([]);
@@ -15,8 +15,8 @@ function SideBar() {
     }, []);
     async function fetchData() {
         try {
-            
-            const response = await fetch(`${baseurl}/api/booking`);
+            const response=await fetch(`${baseurl}/api/booking`);
+            // const response = await fetch('http://localhost:8080/api/booking');s
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
