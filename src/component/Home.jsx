@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 import { movies, slots } from '../component/Data'; // Assuming "seats" import is not needed here
-import SideBar from './SideBar.jsx';
 import { toast } from 'react-toastify';
+import SideBar from './SideBar';
 import 'react-toastify/dist/ReactToastify.css';
-const baseurl="https://backend-l0uj.onrender.com";
+const baseurl = "https://backend-l0uj.onrender.com";
 const Home = () => {
     // Define initial state for seats
     const initialSeatState = {
@@ -16,6 +16,7 @@ const Home = () => {
         D1: 0,
         D2: 0,
     };
+ 
 
     // State variables for movie selection, slot selection, and seats
     const [movie, setMovie] = useState("");
@@ -69,7 +70,7 @@ const Home = () => {
             });
             return;
         }
-    
+
         try {
             // Send the data to the server
             // const response=await fetch(`${baseurl}/api/booking`);
@@ -82,10 +83,10 @@ const Home = () => {
                     'Content-Type': 'application/json'
                 },
             });
-    
+
             const data = await result.json();
             console.log(data);
-    
+
             if (data) {
                 // Show a success toast notification for successful submission
                 toast.success('Data sent successfully', {
@@ -97,7 +98,7 @@ const Home = () => {
                     draggable: true,
                     progress: undefined,
                 });
-    
+
                 // Clear the fields after successful submission
                 setMovie("");
                 setSlot("");
@@ -107,7 +108,7 @@ const Home = () => {
             console.error('Error sending data:', error);
         }
     };
-    
+
 
     // Render the component
     return (
@@ -176,6 +177,7 @@ const Home = () => {
                         {/* Render the Sidebar */}
                         <SideBar />
                     </div>
+
                 </div>
                 <div className='row'>
                     {/* Submit button */}

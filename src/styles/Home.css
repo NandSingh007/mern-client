@@ -125,3 +125,39 @@ section {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 700;
 }
+
+
+/* Styling for the sidebar heading */
+.side_bar_heading {
+    font-size: 35px;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  /* Styling for the list items in the booking details */
+  .movie_detail li {
+    list-style: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+  }
+  
+  /* Styling for the spans within list items */
+  .movie_detail li p span {
+    color: aliceblue;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  /* Styling for the "No Previous Record" message */
+  .previus_Data {
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    color: rgb(119, 0, 0);
+    text-align: center;
+    padding: 40px 0px;
+  }
+  
